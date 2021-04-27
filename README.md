@@ -5,13 +5,16 @@
 # Table of Contents
 
 <!-- MarkdownTOC autolink="true" -->
-
+test
 - [Overview](#overview)
 - [Main Features](#main-features)
 - [Prerequisites](#prerequisites)
 - [Build](#build)
 - [Quick Start](#quick-start)
-- [Data Ingestion Test](#data-ingestion-test)
+	- [The relation of IoTDB and Benchmark with version](#The relation of IoTDB and Benchmark with version)
+		- [IoTDB 0.10.0](#When the version of IoTDB is master(0.10.0) , you have to use the version of dev of benchmark to test it.)
+		- [IoTDB 0.9.0](#When the version of IoTDB is not master(0.9.0) , you have to use the version of master of benchmark to test it.)
+	- [Data Ingestion Test](#data-ingestion-test)
 		- [Configure](#configure)
 		- [Start \(Without Server System Information Recording\)](#start-without-server-system-information-recording)
 		- [Execute](#execute)
