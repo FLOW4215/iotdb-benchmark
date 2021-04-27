@@ -63,7 +63,7 @@ IoTDB-benchmark's features are as following:
 To use IoTDB-benchmark, you need to have:
 
 1. Java 8
-2. Maven (If you want to compile and install IoTDB from source code)
+2. Maven
 3. Apache IoTDB >= v0.8.0 ([https://github.com/apache/incubator-iotdb](https://github.com/apache/incubator-iotdb))
 4. InfluxDB >= 1.3.7
 5. other database system under test
@@ -76,8 +76,9 @@ You can build IoTDB-benchmark using Maven:
 ```
 mvn clean package -Dmaven.test.skip=true
 ```
+This will compile all versions of IoTDB and other database benchmark. if you want to compile a specific database, go to the package and run above command.
 
-> This step is not necessary since the ```benchmark.sh``` script will build the project every time. You can comment the corresponding command to save time.
+After, for example, you can go to `/iotdb-benchmark/iotdb-0.11/target/iotdb-0.11-0.0.1` to run benchmark script. The default 'VERSION' is '0.11.0'. If you want to run a database of other version, go to the `/iotdb-benchmark/{database-name}/target/{database-name}` and don't forget to change `VERSION` in `config.properties` to which you want to test.
 
 # Quick Start
 
@@ -104,7 +105,7 @@ edit the corresponding parameters in the ```conf/config.properties``` file as fo
 ```
 HOST=127.0.0.1
 PORT=6667
-DB_SWITCH=IoTDB
+DB_SWITCH=IoTDB011
 BENCHMARK_WORK_MODE=testWithDefaultPath
 OPERATION_PROPORTION=2:0:0:0:0:0:0:0:0
 GROUP_NUMBER=20
